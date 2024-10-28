@@ -1,0 +1,106 @@
+{
+  "version" : 0.0,
+  "features" : [ {
+    "name" : "id",
+    "inferred_type" : "String",
+    "completeness" : 1.0
+  }, {
+    "name" : "event_time",
+    "inferred_type" : "String",
+    "completeness" : 1.0,
+    "string_constraints" : {
+      "domains" : [ "2024-10-27T17:39:31Z" ]
+    }
+  }, {
+    "name" : "zipcode",
+    "inferred_type" : "String",
+    "completeness" : 1.0
+  }, {
+    "name" : "price",
+    "inferred_type" : "Fractional",
+    "completeness" : 1.0,
+    "num_constraints" : {
+      "is_non_negative" : true
+    }
+  }, {
+    "name" : "bedrooms",
+    "inferred_type" : "Fractional",
+    "completeness" : 1.0,
+    "num_constraints" : {
+      "is_non_negative" : true
+    }
+  }, {
+    "name" : "bathrooms",
+    "inferred_type" : "Fractional",
+    "completeness" : 1.0,
+    "num_constraints" : {
+      "is_non_negative" : true
+    }
+  }, {
+    "name" : "sqft_living",
+    "inferred_type" : "Fractional",
+    "completeness" : 1.0,
+    "num_constraints" : {
+      "is_non_negative" : true
+    }
+  }, {
+    "name" : "city",
+    "inferred_type" : "String",
+    "completeness" : 1.0
+  }, {
+    "name" : "state",
+    "inferred_type" : "String",
+    "completeness" : 1.0,
+    "string_constraints" : {
+      "domains" : [ "New Mexico", "Connecticut", "California", "Nevada", "Hawaii", "Washington", "Florida", "South Carolina", "Virgin Islands", "Montana", "Delaware", "Arkansas", "Alaska", "Texas", "Tennessee", "Puerto Rico", "Minnesota", "Utah", "Georgia", "Missouri", "South Dakota", "Wisconsin", "Maine", "Oklahoma", "North Dakota", "Pennsylvania", "Nebraska", "North Carolina", "Virginia", "Massachusetts", "Alabama", "Mississippi", "New York", "Indiana", "New Hampshire", "Kentucky", "Ohio", "Illinois", "Wyoming", "New Jersey", "Vermont", "West Virginia", "Kansas", "Maryland", "Unknown", "Iowa", "Arizona", "Louisiana", "Rhode Island", "Colorado", "Michigan", "Oregon", "Idaho", "District of Columbia" ]
+    }
+  }, {
+    "name" : "county",
+    "inferred_type" : "String",
+    "completeness" : 1.0,
+    "string_constraints" : {
+      "domains" : [ "Multnomah", "Pima", "San Francisco", "Richmond", "Denton", "Parker", "Clay", "King", "Washington", "Jefferson", "Tulsa", "Adams", "Platte", "Tarrant", "Santa Clara", "Clark", "Delaware", "Douglas", "Bexar", "Virginia Beach", "Williamson", "Osage", "Fairfield", "Durham", "Alameda", "Fort Bend", "San Diego", "Johnson", "Miami-Dade", "Wyandotte", "Oklahoma", "Creek", "Queens", "Pinal", "Maricopa", "Sedgwick", "Collin", "El Paso", "Los Angeles", "Milwaukee", "Travis", "Madera", "Hamilton", "Denver", "New York", "Cobb", "Philadelphia", "Franklin", "Mecklenburg", "Anne Arundel", "Shelby", "Orleans", "Fresno", "Hendricks", "Dallas", "Davidson", "Jackson", "Hancock", "Bernalillo", "Hays", "Fulton", "Bullitt", "Nassau", "Hennepin", "Marion", "Kings", "Cook", "Duval", "Anoka", "Baltimore", "Harris", "Bronx", "DeKalb", "Unknown", "Oldham", "Sarpy", "Canadian", "Cleveland", "St. Johns", "Wake", "Sacramento", "District of Columbia", "Wayne" ]
+    }
+  }, {
+    "name" : "price_per_sqft",
+    "inferred_type" : "Fractional",
+    "completeness" : 1.0,
+    "num_constraints" : {
+      "is_non_negative" : true
+    }
+  }, {
+    "name" : "avg_price_by_city",
+    "inferred_type" : "Fractional",
+    "completeness" : 1.0,
+    "num_constraints" : {
+      "is_non_negative" : true
+    }
+  }, {
+    "name" : "avg_price_per_sqft_by_city",
+    "inferred_type" : "Fractional",
+    "completeness" : 1.0,
+    "num_constraints" : {
+      "is_non_negative" : true
+    }
+  }, {
+    "name" : "above_avg_price_per_sqft",
+    "inferred_type" : "Integral",
+    "completeness" : 1.0,
+    "num_constraints" : {
+      "is_non_negative" : true
+    }
+  } ],
+  "monitoring_config" : {
+    "evaluate_constraints" : "Enabled",
+    "emit_metrics" : "Enabled",
+    "datatype_check_threshold" : 1.0,
+    "domain_content_threshold" : 1.0,
+    "distribution_constraints" : {
+      "perform_comparison" : "Enabled",
+      "comparison_threshold" : 0.1,
+      "comparison_method" : "Robust",
+      "categorical_comparison_threshold" : 0.1,
+      "categorical_drift_method" : "LInfinity"
+    }
+  }
+}
